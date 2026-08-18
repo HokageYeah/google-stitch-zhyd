@@ -1361,36 +1361,36 @@ function loadMoreData() {
 
 > **使用原则：以下为项目中使用 10 次以上的常用 ThorUI 组件。若页面需求与这些组件能力匹配，必须优先考虑使用 ThorUI 组件，不要重复封装同类基础组件。**
 
-| 组件类型                   | 源码直链                                                    |
-| -------------------------- | ----------------------------------------------------------- |
-| 文本组件 `tui-text`        | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/ThorUI组件库/tui-text/tui-text.vue`         |
-| 图标组件 `tui-icon`        | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/ThorUI组件库/tui-icon/tui-icon.vue`         |
-| 表单按钮 `tui-form-button` | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/ThorUI组件库/tui-form-button/tui-form-button.vue`  |
-| 底部弹层                   | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/ThorUI组件库/tui-bottom-popup/tui-bottom-popup.vue` |
-| 栅格列 `tui-col`           | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/ThorUI组件库/tui-col/tui-col.vue`          |
-| 输入框 `tui-input`         | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/ThorUI组件库/tui-input/tui-input.vue`        |
-| 模态框 `tui-modal`         | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/ThorUI组件库/tui-modal/tui-modal.vue`        |
-| 图片懒加载                 | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/ThorUI组件库/tui-lazyload-img/tui-lazyload-img.vue` |
-| 文本域 `tui-textarea`      | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/ThorUI组件库/tui-textarea/tui-textarea.vue`     |
-| 栅格行 `tui-row`           | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/ThorUI组件库/tui-row/tui-row.vue`          |
-| 操作菜单 `tui-actionsheet` | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/ThorUI组件库/tui-actionsheet/tui-actionsheet.vue`  |
-| 对话框 `tui-dialog`        | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/ThorUI组件库/tui-dialog/tui-dialog.vue`       |
-| 复选框 `tui-checkbox`      | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/ThorUI组件库/tui-checkbox/tui-checkbox.vue`     |
-| 标签页 `tui-tabs`          | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/ThorUI组件库/tui-tabs/tui-tabs.vue`         |
+| 组件类型                   | 本地代码直链（仓库相对路径）                                   | 源码直链                                                    |
+| -------------------------- | -------------------------------------------------------------- | ----------------------------------------------------------- |
+| 文本组件 `tui-text`        | `组件库/ThorUI组件库/tui-text/tui-text.vue`                    | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/ThorUI组件库/tui-text/tui-text.vue`         |
+| 图标组件 `tui-icon`        | `组件库/ThorUI组件库/tui-icon/tui-icon.vue`                    | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/ThorUI组件库/tui-icon/tui-icon.vue`         |
+| 表单按钮 `tui-form-button` | `组件库/ThorUI组件库/tui-form-button/tui-form-button.vue`      | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/ThorUI组件库/tui-form-button/tui-form-button.vue`  |
+| 底部弹层                   | `组件库/ThorUI组件库/tui-bottom-popup/tui-bottom-popup.vue`    | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/ThorUI组件库/tui-bottom-popup/tui-bottom-popup.vue` |
+| 栅格列 `tui-col`           | `组件库/ThorUI组件库/tui-col/tui-col.vue`                      | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/ThorUI组件库/tui-col/tui-col.vue`          |
+| 输入框 `tui-input`         | `组件库/ThorUI组件库/tui-input/tui-input.vue`                  | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/ThorUI组件库/tui-input/tui-input.vue`        |
+| 模态框 `tui-modal`         | `组件库/ThorUI组件库/tui-modal/tui-modal.vue`                  | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/ThorUI组件库/tui-modal/tui-modal.vue`        |
+| 图片懒加载                 | `组件库/ThorUI组件库/tui-lazyload-img/tui-lazyload-img.vue`    | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/ThorUI组件库/tui-lazyload-img/tui-lazyload-img.vue` |
+| 文本域 `tui-textarea`      | `组件库/ThorUI组件库/tui-textarea/tui-textarea.vue`            | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/ThorUI组件库/tui-textarea/tui-textarea.vue`     |
+| 栅格行 `tui-row`           | `组件库/ThorUI组件库/tui-row/tui-row.vue`                      | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/ThorUI组件库/tui-row/tui-row.vue`          |
+| 操作菜单 `tui-actionsheet` | `组件库/ThorUI组件库/tui-actionsheet/tui-actionsheet.vue`      | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/ThorUI组件库/tui-actionsheet/tui-actionsheet.vue`  |
+| 对话框 `tui-dialog`        | `组件库/ThorUI组件库/tui-dialog/tui-dialog.vue`                | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/ThorUI组件库/tui-dialog/tui-dialog.vue`       |
+| 复选框 `tui-checkbox`      | `组件库/ThorUI组件库/tui-checkbox/tui-checkbox.vue`            | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/ThorUI组件库/tui-checkbox/tui-checkbox.vue`     |
+| 标签页 `tui-tabs`          | `组件库/ThorUI组件库/tui-tabs/tui-tabs.vue`                    | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/ThorUI组件库/tui-tabs/tui-tabs.vue`         |
 
 #### XXT 业务组件目录
 
-| 组件类型   | 源码直链                                                              |
-| ---------- | --------------------------------------------------------------------- |
-| 登录拦截   | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/XXT业务组件库/xxt-common-unlogin/xxt-common-unlogin.vue` |
-| 模块标题   | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/XXT业务组件库/xxt-common-title/xxt-common-title.vue`   |
-| 空状态     | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/XXT业务组件库/xxt-empty/xxt-empty.vue`          |
-| 文本折叠   | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/XXT业务组件库/xxt-text-overflow/xxt-text-overflow.vue`  |
-| 文件上传   | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/XXT业务组件库/xxt-file-submit/xxt-file-submit.vue`    |
-| 图片签章   | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/XXT业务组件库/xxt-img-sign/xxt-img-sign.vue`       |
-| 通知卡片   | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/XXT业务组件库/xxt-notice-card/xxt-notice-card.vue`    |
-| 底部标签栏 | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/XXT业务组件库/xxt-tabs-bottom/xxt-tabs-bottom.vue`    |
-| 任务卡片   | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/XXT业务组件库/xxt-task-card/xxt-task-card.vue`      |
+| 组件类型   | 本地代码直链（仓库相对路径）                                        | 源码直链                                                              |
+| ---------- | ------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| 登录拦截   | `组件库/XXT业务组件库/xxt-common-unlogin/xxt-common-unlogin.vue`    | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/XXT业务组件库/xxt-common-unlogin/xxt-common-unlogin.vue` |
+| 模块标题   | `组件库/XXT业务组件库/xxt-common-title/xxt-common-title.vue`        | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/XXT业务组件库/xxt-common-title/xxt-common-title.vue`   |
+| 空状态     | `组件库/XXT业务组件库/xxt-empty/xxt-empty.vue`                      | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/XXT业务组件库/xxt-empty/xxt-empty.vue`          |
+| 文本折叠   | `组件库/XXT业务组件库/xxt-text-overflow/xxt-text-overflow.vue`      | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/XXT业务组件库/xxt-text-overflow/xxt-text-overflow.vue`  |
+| 文件上传   | `组件库/XXT业务组件库/xxt-file-submit/xxt-file-submit.vue`          | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/XXT业务组件库/xxt-file-submit/xxt-file-submit.vue`    |
+| 图片签章   | `组件库/XXT业务组件库/xxt-img-sign/xxt-img-sign.vue`                | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/XXT业务组件库/xxt-img-sign/xxt-img-sign.vue`       |
+| 通知卡片   | `组件库/XXT业务组件库/xxt-notice-card/xxt-notice-card.vue`          | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/XXT业务组件库/xxt-notice-card/xxt-notice-card.vue`    |
+| 底部标签栏 | `组件库/XXT业务组件库/xxt-tabs-bottom/xxt-tabs-bottom.vue`          | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/XXT业务组件库/xxt-tabs-bottom/xxt-tabs-bottom.vue`    |
+| 任务卡片   | `组件库/XXT业务组件库/xxt-task-card/xxt-task-card.vue`              | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/XXT业务组件库/xxt-task-card/xxt-task-card.vue`      |
 
 #### 使用原则
 
