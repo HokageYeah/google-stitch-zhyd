@@ -111,6 +111,26 @@ components:
     textColor: "{colors.primary}"
   tab-bar-item-inactive:
     textColor: "{colors.on-surface-tertiary}"
+  input:
+    backgroundColor: "{colors.surface-container}"
+    textColor: "{colors.on-surface}"
+    typography: "{typography.body-lg}"
+  textarea:
+    height: 100px
+    backgroundColor: "{colors.surface-container}"
+    textColor: "{colors.on-surface-medium}"
+    typography: "{typography.body-lg}"
+  actionsheet:
+    height: 50px
+    backgroundColor: "{colors.surface-container}"
+    rounded: "{rounded.md}"
+  tabs-top:
+    height: 40px
+    backgroundColor: "{colors.surface-container}"
+  searchbar:
+    height: 36px
+    backgroundColor: "#EDEDED"
+    rounded: 4px
 ---
 
 # 智慧悦读 Design System
@@ -217,11 +237,26 @@ components:
 - **登录拦截态（xxt-common-unlogin）**：居中插画 + 引导文案 + 品牌绿"去登录/加入班级"按钮
 - **图标（tui-icon）**：线性图标为主；16px 行内辅助 / 20px 列表卡片 / 26px tab 与大操作；颜色跟随文字层级
 - **文本折叠（xxt-text-overflow）**：默认折叠 3 行 + 末行白色渐变遮罩 + "展开详情"，展开后"收起详情"（12-14px 绿色或 `#999`）
+- **输入框（tui-input）**：表单输入统一形态——白底区块内一行：左侧 label 16px `#333`（最小宽 70px）+ 右侧内容 16px `#222`，占位 `#B2B2B2`，右侧可带清除按钮（`#BFBFBF`）；内边距上下 13px 左右 15px，底部分割线 `#EAEEF1`，无需外描边
+- **文本域（tui-textarea）**：多行输入，默认高 100px，白底，内边距 13px 15px，文字 16px `#333`；常带字数统计（右下角 12px `#999`）
+- **操作菜单（tui-actionsheet）**：页面级底部弹层，白底顶部两角 12px 圆角；列表项高 50px、文字 17px 居中（`#808080`，危险操作红色），底部独立"取消"按钮（灰底 `#F5F5F5` 或间隔条），遮罩 `rgba(0,0,0,0.5)`。用于"更多操作"分支选择
+- **顶部标签页（tui-tabs）**：页面内分区切换，高 40px 白底，tab 文字 14px：未选中 `#666`、选中 **品牌绿 `#4AD975`** + 下划线滑块。⚠️ 组件源码默认选中色回落出厂蓝 `#5677fc`，设计稿中一律覆盖为品牌绿
+- **搜索栏（tui-searchbar）**：页面顶部搜索形态——灰底 `#EDEDED` 输入条，高 36px、圆角 4px、内边距 8px 10px，占位"请输入搜索关键词" `#B2B2B2`，左侧放大镜图标，右侧"取消/搜索"文字按钮（14px `#666` 或品牌绿）
+- **小标签（tui-tag）**：tag token 的实现组件，默认内边距 8px 13px、字号 14px；业务中统一浅绿底 `#EDFBF1` 绿字胶囊形态（见 tag token），危险标签才用红系，禁止出厂蓝
+- **选择控件（tui-checkbox / tui-radio / tui-switch）**：未选中态 `#CCC` 描边（checkbox 方形 / radio 圆形 / switch 胶囊轨道）；选中态一律**品牌绿**（源码默认回落出厂蓝，必须覆盖）；switch 选中轨道品牌绿 + 白色圆钮
+- **模态框（tui-modal / tui-dialog）**：通用弹窗形态——白底四角 12px 圆角、宽 84%（约 315px）、内边距 20px 32px、遮罩 `rgba(0,0,0,0.6)`；业务二次确认弹窗优先 xxt-common-modal（280px 形态），tui-modal 用于带插画/自定义结构的提示场景
+- **自定义导航栏（tui-navigation-bar）**：页面顶部白底导航——含状态栏占位、返回箭头（`#333`）、居中标题 18px bold `#333`；底部 1px 分割线可选
+- **图片懒加载（tui-lazyload-img）**：所有网络图片统一形态，占位底 `#E7E7E7`，默认方图约 170px，支持圆角（卡片缩略图用 8px）与淡入
+- **日期时间选择（tui-datetime）**：底部弹层式选择器（挂在 tui-bottom-popup 上），面板高约 260px，含"取消/确定"顶栏（16px，确定为品牌绿）与滚轮列
+- **附件上传（xxt-file-submit）**：白底区块内的附件网格形态——已选附件缩略图九宫格（含类型角标、上传中 loading、删除角标）+ "添加"虚线格按钮；支持图片/语音/视频/文件/链接类型。凡作业提交、评论附件、通知附件场景必须用此形态
+- **图片签章（xxt-img-sign)**：图片上叠加可拖拽的签章/签名层（movable 拖拽定位 + 缩放），用于作业签名、盖章定位场景；设计稿表现：底图 + 半透明签章浮层 + 引导提示
+- **栅格（tui-row / tui-col）**：24 栅格布局辅助，自身不呈现视觉样式，仅用于对齐
 
 ## Do's and Don'ts
 
 - Do 全局主色只用品牌绿 `#4AD975`，CTA 用 `#52EF81 → #4AD975` 横向渐变胶囊
 - Don't 引入第二主色；Don't 使用 Material 默认蓝/紫或 ThorUI 出厂蓝 `#5677FC`
+- Do ThorUI 组件的选中/激活色（tui-tabs、tui-checkbox、tui-radio、tui-switch、tui-tag 等）一律显式用品牌绿 `#4AD975`——源码默认回落出厂蓝，不覆盖就会跑色
 - Do 保持扁平：卡片无阴影，靠灰底白卡对比分层
 - Don't 使用重阴影、玻璃拟态、大渐变背景块
 - Do 所有弹层做成页面级容器 + 全屏遮罩
@@ -233,13 +268,67 @@ components:
 - Do 使用中文规范文案：按钮"确定/取消"、空态"暂无数据"、列表尾"已经到底了"
 - Do 吸底元素（Tabbar、提交按钮、弹层）一律预留 iOS 底部安全区
 
-## Appendix: 单位换算与源码查阅（自定义扩展节）
+## Appendix: 组件源码索引与设计代理工作协议（自定义扩展节）
+
+### A1. 设计代理工作协议（Agent 必读）
+
+本仓库 `https://github.com/HokageYeah/google-stitch-zhyd`（默认分支 `master`）是本项目设计规范的**唯一事实来源**。设计任何页面时按以下顺序执行：
+
+1. **硬约束**：本文档 front matter 中的 tokens 与「Do's and Don'ts」是不可违反的硬约束，优先级最高
+2. **组件源码**：凡「Components」节列出的组件，按下表直链抓取 `.vue` 源码，理解其真实结构、props 与视觉细节后再设计——这些组件均在线上成熟应用，**必须按源码形态设计，不得自创同类组件**
+3. **兜底**：若某链接抓取失败，按本文档该组件的文字视觉规范设计；**不得凭空虚构组件形态或引入新主色**
+
+### A2. 组件源码直链（raw.githubusercontent.com，可直接抓取）
+
+**XXT 业务组件：**
+
+| 组件 | 源码直链 |
+| ---- | -------- |
+| xxt-common-title 模块标题 | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/XXT业务组件库/xxt-common-title/xxt-common-title.vue` |
+| xxt-task-card 任务卡片 | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/XXT业务组件库/xxt-task-card/xxt-task-card.vue` |
+| xxt-notice-card 通知卡片 | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/XXT业务组件库/xxt-notice-card/xxt-notice-card.vue` |
+| xxt-common-modal 确认弹窗 | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/XXT业务组件库/xxt-common-modal/xxt-common-modal.vue` |
+| xxt-tabs-bottom 底部 Tab | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/XXT业务组件库/xxt-tabs-bottom/xxt-tabs-bottom.vue` |
+| xxt-empty 空状态 | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/XXT业务组件库/xxt-empty/xxt-empty.vue` |
+| xxt-common-unlogin 登录拦截 | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/XXT业务组件库/xxt-common-unlogin/xxt-common-unlogin.vue` |
+| xxt-text-overflow 文本折叠 | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/XXT业务组件库/xxt-text-overflow/xxt-text-overflow.vue` |
+| xxt-file-submit 附件上传 | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/XXT业务组件库/xxt-file-submit/xxt-file-submit.vue` |
+| xxt-img-sign 图片签章 | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/XXT业务组件库/xxt-img-sign/xxt-img-sign.vue` |
+
+**ThorUI 基础组件：**
+
+| 组件 | 源码直链 |
+| ---- | -------- |
+| tui-list-cell 列表项 | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/ThorUI组件库/tui-list-cell/tui-list-cell.vue` |
+| tui-bottom-popup 底部弹层 | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/ThorUI组件库/tui-bottom-popup/tui-bottom-popup.vue` |
+| tui-icon 图标 | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/ThorUI组件库/tui-icon/tui-icon.vue` |
+| tui-config 全局配置（语义色/尺寸出厂值） | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/ThorUI组件库/tui-config/index.js` |
+| tui-input 输入框 | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/ThorUI组件库/tui-input/tui-input.vue` |
+| tui-textarea 文本域 | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/ThorUI组件库/tui-textarea/tui-textarea.vue` |
+| tui-form-button 表单按钮 | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/ThorUI组件库/tui-form-button/tui-form-button.vue` |
+| tui-actionsheet 操作菜单 | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/ThorUI组件库/tui-actionsheet/tui-actionsheet.vue` |
+| tui-tabs 顶部标签页 | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/ThorUI组件库/tui-tabs/tui-tabs.vue` |
+| tui-searchbar 搜索栏 | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/ThorUI组件库/tui-searchbar/tui-searchbar.vue` |
+| tui-tag 小标签 | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/ThorUI组件库/tui-tag/tui-tag.vue` |
+| tui-checkbox 复选框 | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/ThorUI组件库/tui-checkbox/tui-checkbox.vue` |
+| tui-radio 单选框 | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/ThorUI组件库/tui-radio/tui-radio.vue` |
+| tui-switch 开关 | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/ThorUI组件库/tui-switch/tui-switch.vue` |
+| tui-modal 模态框 | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/ThorUI组件库/tui-modal/tui-modal.vue` |
+| tui-dialog 对话框 | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/ThorUI组件库/tui-dialog/tui-dialog.vue` |
+| tui-navigation-bar 自定义导航栏 | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/ThorUI组件库/tui-navigation-bar/tui-navigation-bar.vue` |
+| tui-lazyload-img 图片懒加载 | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/ThorUI组件库/tui-lazyload-img/tui-lazyload-img.vue` |
+| tui-datetime 日期时间选择 | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/ThorUI组件库/tui-datetime/tui-datetime.vue` |
+| tui-text 文本 | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/ThorUI组件库/tui-text/tui-text.vue` |
+| tui-row 栅格行 | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/ThorUI组件库/tui-row/tui-row.vue` |
+| tui-col 栅格列 | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/ThorUI组件库/tui-col/tui-col.vue` |
+
+**工程规范：** `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/UniApp模块化工程规范.md`
+
+> 其余组件按同样规则拼接路径：`https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/{ThorUI组件库|XXT业务组件库}/<组件名>/<组件名>.vue`。源码仅作查阅参考，禁止修改。
+
+### A3. 单位换算与 Prompt 模板
 
 - **单位换算**：本文档所有数值为设计稿 px（375pt 基准）；工程 rpx = 设计 px × 2
-- **组件源码**（仅查阅参考，禁止修改）：
-  - ThorUI 基础组件：`组件库/ThorUI组件库/<组件名>/<组件名>.vue`
-  - XXT 业务组件：`组件库/XXT业务组件库/<组件名>/<组件名>.vue`
-  - 工程开发规范（组件用法 / props / 事件）：见 `UniApp模块化工程规范.md`
 - **Stitch Prompt 模板**（可直接粘贴）：
 
 ```

@@ -127,7 +127,7 @@ alwaysApply: true
 | `tui-searchbar`      | 5        | 搜索栏                             |
 | `tui-tag`            | 5        | 标签                               |
 
-> 更多组件可在 `组件库/ThorUI组件库/` 目录下查看
+> 更多组件可在 GitHub 目录 `https://github.com/HokageYeah/google-stitch-zhyd/tree/master/组件库/ThorUI组件库` 下查看
 
 ### 2.2 XXT 组件库
 
@@ -145,7 +145,7 @@ alwaysApply: true
 | `xxt-task-card`      | 任务卡片            |
 | `xxt-text-overflow`  | 文本折叠/展开组件   |
 
-> 更多组件可在本项目的 `组件库/XXT业务组件库/` 目录下查看
+> 更多组件可在 GitHub 目录 `https://github.com/HokageYeah/google-stitch-zhyd/tree/master/组件库/XXT业务组件库` 下查看
 
 #### 2.2.1 常用 XXT 业务组件说明
 
@@ -644,7 +644,7 @@ export function useEvaluation() {
 
 凡是页面中的**二次确认弹窗**（如删除、退出、解绑、确认提交等），**必须统一使用公共组件 `xxt-common-modal`**，禁止直接使用 `uni.showModal` 作为业务确认弹窗。
 
-- **组件路径**：`组件库/XXT业务组件库/xxt-common-modal/xxt-common-modal.vue`
+- **组件路径**：`https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/XXT业务组件库/xxt-common-modal/xxt-common-modal.vue`
 - **适用场景**：退出确认、删除确认、解绑确认、操作前二次提醒
 - **推荐做法**：
   - 页面中使用 `ref(false)` 控制弹窗显示状态
@@ -932,7 +932,7 @@ async function loadData(params: any, type: number) {
   - 文字输入弹出框
   - 底部表单面板
   - 底部菜单、底部选择器
-- **组件路径**：`组件库/ThorUI组件库/tui-bottom-popup/tui-bottom-popup.vue`
+- **组件路径**：`https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/ThorUI组件库/tui-bottom-popup/tui-bottom-popup.vue`
 - **规范要求**：
   - 弹层显隐统一使用 `ref(false)` 控制
   - 必须通过 `@close` 处理关闭逻辑，并同步清理页面状态
@@ -994,7 +994,7 @@ const handleImageClick = () => {
 </script>
 ```
 
-**组件路径**：`组件库/ThorUI组件库/tui-lazyload-img/tui-lazyload-img.vue`
+**组件路径**：`https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/ThorUI组件库/tui-lazyload-img/tui-lazyload-img.vue`
 
 **常用属性**：
 | 属性        | 类型    | 默认值   | 说明          |
@@ -1026,7 +1026,7 @@ const handleImageClick = () => {
 </script>
 ```
 
-**组件路径**：`组件库/ThorUI组件库/tui-text/tui-text.vue`
+**组件路径**：`https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/ThorUI组件库/tui-text/tui-text.vue`
 
 **常用属性**：
 | 属性       | 类型          | 默认值 | 说明                                                  |
@@ -1057,7 +1057,7 @@ const handleImageClick = () => {
 </script>
 ```
 
-**组件路径**：`组件库/ThorUI组件库/tui-icon/tui-icon.vue`
+**组件路径**：`https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/ThorUI组件库/tui-icon/tui-icon.vue`
 
 > 注意：`tui-icon` 是 ThorUI 组件库的一部分，支持多种图标类型。如需使用 iconfont，需要配置自定义图标。
 
@@ -1355,40 +1355,42 @@ function loadMoreData() {
 
 公共组件源码在本项目中统一位于 `组件库/` 目录下（ThorUI 组件库与 XXT 业务组件库），开发前应先在该目录中查找是否已有可复用组件。
 
+> **设计侧约束**：Google Stitch 等 UI 设计代理读取本仓库时，设计规范以根目录 `DESIGN.md` 为唯一事实来源（`https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/DESIGN.md`），其中 Appendix A2 含全部组件源码直链索引。
+
 #### ThorUI 组件目录
 
 > **使用原则：以下为项目中使用 10 次以上的常用 ThorUI 组件。若页面需求与这些组件能力匹配，必须优先考虑使用 ThorUI 组件，不要重复封装同类基础组件。**
 
-| 组件类型                   | 目录路径                                                    |
+| 组件类型                   | 源码直链                                                    |
 | -------------------------- | ----------------------------------------------------------- |
-| 文本组件 `tui-text`        | `组件库/ThorUI组件库/tui-text/`         |
-| 图标组件 `tui-icon`        | `组件库/ThorUI组件库/tui-icon/`         |
-| 表单按钮 `tui-form-button` | `组件库/ThorUI组件库/tui-form-button/`  |
-| 底部弹层                   | `组件库/ThorUI组件库/tui-bottom-popup/` |
-| 栅格列 `tui-col`           | `组件库/ThorUI组件库/tui-col/`          |
-| 输入框 `tui-input`         | `组件库/ThorUI组件库/tui-input/`        |
-| 模态框 `tui-modal`         | `组件库/ThorUI组件库/tui-modal/`        |
-| 图片懒加载                 | `组件库/ThorUI组件库/tui-lazyload-img/` |
-| 文本域 `tui-textarea`      | `组件库/ThorUI组件库/tui-textarea/`     |
-| 栅格行 `tui-row`           | `组件库/ThorUI组件库/tui-row/`          |
-| 操作菜单 `tui-actionsheet` | `组件库/ThorUI组件库/tui-actionsheet/`  |
-| 对话框 `tui-dialog`        | `组件库/ThorUI组件库/tui-dialog/`       |
-| 复选框 `tui-checkbox`      | `组件库/ThorUI组件库/tui-checkbox/`     |
-| 标签页 `tui-tabs`          | `组件库/ThorUI组件库/tui-tabs/`         |
+| 文本组件 `tui-text`        | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/ThorUI组件库/tui-text/tui-text.vue`         |
+| 图标组件 `tui-icon`        | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/ThorUI组件库/tui-icon/tui-icon.vue`         |
+| 表单按钮 `tui-form-button` | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/ThorUI组件库/tui-form-button/tui-form-button.vue`  |
+| 底部弹层                   | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/ThorUI组件库/tui-bottom-popup/tui-bottom-popup.vue` |
+| 栅格列 `tui-col`           | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/ThorUI组件库/tui-col/tui-col.vue`          |
+| 输入框 `tui-input`         | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/ThorUI组件库/tui-input/tui-input.vue`        |
+| 模态框 `tui-modal`         | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/ThorUI组件库/tui-modal/tui-modal.vue`        |
+| 图片懒加载                 | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/ThorUI组件库/tui-lazyload-img/tui-lazyload-img.vue` |
+| 文本域 `tui-textarea`      | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/ThorUI组件库/tui-textarea/tui-textarea.vue`     |
+| 栅格行 `tui-row`           | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/ThorUI组件库/tui-row/tui-row.vue`          |
+| 操作菜单 `tui-actionsheet` | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/ThorUI组件库/tui-actionsheet/tui-actionsheet.vue`  |
+| 对话框 `tui-dialog`        | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/ThorUI组件库/tui-dialog/tui-dialog.vue`       |
+| 复选框 `tui-checkbox`      | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/ThorUI组件库/tui-checkbox/tui-checkbox.vue`     |
+| 标签页 `tui-tabs`          | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/ThorUI组件库/tui-tabs/tui-tabs.vue`         |
 
 #### XXT 业务组件目录
 
-| 组件类型   | 目录路径                                                              |
+| 组件类型   | 源码直链                                                              |
 | ---------- | --------------------------------------------------------------------- |
-| 登录拦截   | `组件库/XXT业务组件库/xxt-common-unlogin/` |
-| 模块标题   | `组件库/XXT业务组件库/xxt-common-title/`   |
-| 空状态     | `组件库/XXT业务组件库/xxt-empty/`          |
-| 文本折叠   | `组件库/XXT业务组件库/xxt-text-overflow/`  |
-| 文件上传   | `组件库/XXT业务组件库/xxt-file-submit/`    |
-| 图片签章   | `组件库/XXT业务组件库/xxt-img-sign/`       |
-| 通知卡片   | `组件库/XXT业务组件库/xxt-notice-card/`    |
-| 底部标签栏 | `组件库/XXT业务组件库/xxt-tabs-bottom/`    |
-| 任务卡片   | `组件库/XXT业务组件库/xxt-task-card/`      |
+| 登录拦截   | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/XXT业务组件库/xxt-common-unlogin/xxt-common-unlogin.vue` |
+| 模块标题   | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/XXT业务组件库/xxt-common-title/xxt-common-title.vue`   |
+| 空状态     | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/XXT业务组件库/xxt-empty/xxt-empty.vue`          |
+| 文本折叠   | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/XXT业务组件库/xxt-text-overflow/xxt-text-overflow.vue`  |
+| 文件上传   | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/XXT业务组件库/xxt-file-submit/xxt-file-submit.vue`    |
+| 图片签章   | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/XXT业务组件库/xxt-img-sign/xxt-img-sign.vue`       |
+| 通知卡片   | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/XXT业务组件库/xxt-notice-card/xxt-notice-card.vue`    |
+| 底部标签栏 | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/XXT业务组件库/xxt-tabs-bottom/xxt-tabs-bottom.vue`    |
+| 任务卡片   | `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/组件库/XXT业务组件库/xxt-task-card/xxt-task-card.vue`      |
 
 #### 使用原则
 
