@@ -97,7 +97,7 @@ alwaysApply: true
 
 ## 二、组件库
 
-项目使用以下公共组件库，均位于 `src/uni-module-common/components/` 目录下：
+项目使用以下公共组件库，组件源码均位于本项目的 `组件库/` 目录下（仅作查阅参考，禁止修改）：
 
 ### 2.1 ThorUI 组件库
 
@@ -127,11 +127,11 @@ alwaysApply: true
 | `tui-searchbar`      | 5        | 搜索栏                             |
 | `tui-tag`            | 5        | 标签                               |
 
-> 更多组件可在 `src/uni-module-common/components/thorui/` 目录下查看
+> 更多组件可在 `组件库/ThorUI组件库/` 目录下查看
 
 ### 2.2 XXT 组件库
 
-项目封装了多个业务组件，位于 `xxt-components/` 目录下，常见组件包括：
+项目封装了多个业务组件，位于本项目的 `组件库/XXT业务组件库/` 目录下，常见组件包括：
 
 | 组件                 | 说明                |
 | -------------------- | ------------------- |
@@ -145,7 +145,7 @@ alwaysApply: true
 | `xxt-task-card`      | 任务卡片            |
 | `xxt-text-overflow`  | 文本折叠/展开组件   |
 
-> 更多组件可在 `src/uni-module-common/components/` 目录下查看
+> 更多组件可在本项目的 `组件库/XXT业务组件库/` 目录下查看
 
 #### 2.2.1 常用 XXT 业务组件说明
 
@@ -361,7 +361,7 @@ hooks/use-example-page.ts     业务逻辑：状态、分页、筛选、请求�
 
 开发时应具有组件化开发意识，遵循以下优先级：
 
-1. **优先使用公共组件库**：首先在 `src/uni-module-common/components/` 下查找是否有可复用的组件（ThorUI 或 XXT 组件）
+1. **优先使用公共组件库**：首先在本项目 `组件库/ThorUI组件库/`、`组件库/XXT业务组件库/` 下查找是否有可复用的组件（ThorUI 或 XXT 组件）
 2. **封装通用组件**：如果现有组件无法满足需求，应在当前模块的 `components` 文件夹中封装可复用的组件
 3. **页面级组件**：放置在当前页面目录下的 `components` 文件夹中
 4. **模块级组件**：放置在模块根目录的 `components` 文件夹中
@@ -370,7 +370,7 @@ hooks/use-example-page.ts     业务逻辑：状态、分页、筛选、请求�
 
 > **⚠️ 重要警告：禁止向公共模块提交代码**
 >
-> - **禁止修改** `src/uni-module-common/` 目录下的任何代码，该公共模块在多个项目中使用，修改可能影响其他业务
+> - **禁止修改** `src/uni-module-common/` 目录下的任何代码，该公共模块在多个项目中使用，修改可能影响其他业务；本项目 `组件库/` 目录下的 ThorUI / XXT 组件源码仅为查阅参考，同样禁止修改
 > - 如果组件或逻辑需要公用，应在自己的模块根目录下新建 `hooks` 或 `components` 目录来存放
 > - 业务模块应保持独立性，避免对公共模块产生依赖
 
@@ -644,7 +644,7 @@ export function useEvaluation() {
 
 凡是页面中的**二次确认弹窗**（如删除、退出、解绑、确认提交等），**必须统一使用公共组件 `xxt-common-modal`**，禁止直接使用 `uni.showModal` 作为业务确认弹窗。
 
-- **组件路径**：`src/uni-module-common/components/xxt-components/xxt-common-modal/xxt-common-modal.vue`
+- **组件路径**：`组件库/XXT业务组件库/xxt-common-modal/xxt-common-modal.vue`
 - **适用场景**：退出确认、删除确认、解绑确认、操作前二次提醒
 - **推荐做法**：
   - 页面中使用 `ref(false)` 控制弹窗显示状态
@@ -932,7 +932,7 @@ async function loadData(params: any, type: number) {
   - 文字输入弹出框
   - 底部表单面板
   - 底部菜单、底部选择器
-- **组件路径**：`@/uni-module-common/components/thorui/tui-bottom-popup/tui-bottom-popup.vue`
+- **组件路径**：`组件库/ThorUI组件库/tui-bottom-popup/tui-bottom-popup.vue`
 - **规范要求**：
   - 弹层显隐统一使用 `ref(false)` 控制
   - 必须通过 `@close` 处理关闭逻辑，并同步清理页面状态
@@ -994,7 +994,7 @@ const handleImageClick = () => {
 </script>
 ```
 
-**组件路径**：`@/uni-module-common/components/thorui/tui-lazyload-img/tui-lazyload-img.vue`
+**组件路径**：`组件库/ThorUI组件库/tui-lazyload-img/tui-lazyload-img.vue`
 
 **常用属性**：
 | 属性        | 类型    | 默认值   | 说明          |
@@ -1026,7 +1026,7 @@ const handleImageClick = () => {
 </script>
 ```
 
-**组件路径**：`@/uni-module-common/components/thorui/tui-text/tui-text.vue`
+**组件路径**：`组件库/ThorUI组件库/tui-text/tui-text.vue`
 
 **常用属性**：
 | 属性       | 类型          | 默认值 | 说明                                                  |
@@ -1057,7 +1057,7 @@ const handleImageClick = () => {
 </script>
 ```
 
-**组件路径**：`@/uni-module-common/components/thorui/tui-icon/tui-icon.vue`
+**组件路径**：`组件库/ThorUI组件库/tui-icon/tui-icon.vue`
 
 > 注意：`tui-icon` 是 ThorUI 组件库的一部分，支持多种图标类型。如需使用 iconfont，需要配置自定义图标。
 
@@ -1353,7 +1353,7 @@ function loadMoreData() {
 
 ### 公共组件目录约定
 
-公共组件统一位于 `src/uni-module-common/components/` 目录下，开发前应先在该目录中查找是否已有可复用组件。
+公共组件源码在本项目中统一位于 `组件库/` 目录下（ThorUI 组件库与 XXT 业务组件库），开发前应先在该目录中查找是否已有可复用组件。
 
 #### ThorUI 组件目录
 
@@ -1361,34 +1361,34 @@ function loadMoreData() {
 
 | 组件类型                   | 目录路径                                                    |
 | -------------------------- | ----------------------------------------------------------- |
-| 文本组件 `tui-text`        | `src/uni-module-common/components/thorui/tui-text/`         |
-| 图标组件 `tui-icon`        | `src/uni-module-common/components/thorui/tui-icon/`         |
-| 表单按钮 `tui-form-button` | `src/uni-module-common/components/thorui/tui-form-button/`  |
-| 底部弹层                   | `src/uni-module-common/components/thorui/tui-bottom-popup/` |
-| 栅格列 `tui-col`           | `src/uni-module-common/components/thorui/tui-col/`          |
-| 输入框 `tui-input`         | `src/uni-module-common/components/thorui/tui-input/`        |
-| 模态框 `tui-modal`         | `src/uni-module-common/components/thorui/tui-modal/`        |
-| 图片懒加载                 | `src/uni-module-common/components/thorui/tui-lazyload-img/` |
-| 文本域 `tui-textarea`      | `src/uni-module-common/components/thorui/tui-textarea/`     |
-| 栅格行 `tui-row`           | `src/uni-module-common/components/thorui/tui-row/`          |
-| 操作菜单 `tui-actionsheet` | `src/uni-module-common/components/thorui/tui-actionsheet/`  |
-| 对话框 `tui-dialog`        | `src/uni-module-common/components/thorui/tui-dialog/`       |
-| 复选框 `tui-checkbox`      | `src/uni-module-common/components/thorui/tui-checkbox/`     |
-| 标签页 `tui-tabs`          | `src/uni-module-common/components/thorui/tui-tabs/`         |
+| 文本组件 `tui-text`        | `组件库/ThorUI组件库/tui-text/`         |
+| 图标组件 `tui-icon`        | `组件库/ThorUI组件库/tui-icon/`         |
+| 表单按钮 `tui-form-button` | `组件库/ThorUI组件库/tui-form-button/`  |
+| 底部弹层                   | `组件库/ThorUI组件库/tui-bottom-popup/` |
+| 栅格列 `tui-col`           | `组件库/ThorUI组件库/tui-col/`          |
+| 输入框 `tui-input`         | `组件库/ThorUI组件库/tui-input/`        |
+| 模态框 `tui-modal`         | `组件库/ThorUI组件库/tui-modal/`        |
+| 图片懒加载                 | `组件库/ThorUI组件库/tui-lazyload-img/` |
+| 文本域 `tui-textarea`      | `组件库/ThorUI组件库/tui-textarea/`     |
+| 栅格行 `tui-row`           | `组件库/ThorUI组件库/tui-row/`          |
+| 操作菜单 `tui-actionsheet` | `组件库/ThorUI组件库/tui-actionsheet/`  |
+| 对话框 `tui-dialog`        | `组件库/ThorUI组件库/tui-dialog/`       |
+| 复选框 `tui-checkbox`      | `组件库/ThorUI组件库/tui-checkbox/`     |
+| 标签页 `tui-tabs`          | `组件库/ThorUI组件库/tui-tabs/`         |
 
 #### XXT 业务组件目录
 
 | 组件类型   | 目录路径                                                              |
 | ---------- | --------------------------------------------------------------------- |
-| 登录拦截   | `src/uni-module-common/components/xxt-components/xxt-common-unlogin/` |
-| 模块标题   | `src/uni-module-common/components/xxt-components/xxt-common-title/`   |
-| 空状态     | `src/uni-module-common/components/xxt-components/xxt-empty/`          |
-| 文本折叠   | `src/uni-module-common/components/xxt-components/xxt-text-overflow/`  |
-| 文件上传   | `src/uni-module-common/components/xxt-components/xxt-file-submit/`    |
-| 图片签章   | `src/uni-module-common/components/xxt-components/xxt-img-sign/`       |
-| 通知卡片   | `src/uni-module-common/components/xxt-components/xxt-notice-card/`    |
-| 底部标签栏 | `src/uni-module-common/components/xxt-components/xxt-tabs-bottom/`    |
-| 任务卡片   | `src/uni-module-common/components/xxt-components/xxt-task-card/`      |
+| 登录拦截   | `组件库/XXT业务组件库/xxt-common-unlogin/` |
+| 模块标题   | `组件库/XXT业务组件库/xxt-common-title/`   |
+| 空状态     | `组件库/XXT业务组件库/xxt-empty/`          |
+| 文本折叠   | `组件库/XXT业务组件库/xxt-text-overflow/`  |
+| 文件上传   | `组件库/XXT业务组件库/xxt-file-submit/`    |
+| 图片签章   | `组件库/XXT业务组件库/xxt-img-sign/`       |
+| 通知卡片   | `组件库/XXT业务组件库/xxt-notice-card/`    |
+| 底部标签栏 | `组件库/XXT业务组件库/xxt-tabs-bottom/`    |
+| 任务卡片   | `组件库/XXT业务组件库/xxt-task-card/`      |
 
 #### 使用原则
 
