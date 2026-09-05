@@ -91,11 +91,11 @@ const maxlength = ref(200);
 const voiceImgSrc = computed(() => {
   console.log('isVoice.value', isVoice.value);
   if (props.isVoiceOnly) {
-    return `${$cdn}/nb/m/uni-zhyd/img/sound-record.png`;
+    return `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/image/sound-record.png`;
   }
   return !isVoice.value
-    ? `${$cdn}/nb/m/uni-zhyd/img/sound-record.png`
-    : `${$cdn}/nb/m/uni-zhyd/img/sound-keyboard.png`;
+    ? `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/image/sound-record.png`
+    : `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/image/sound-keyboard.png`;
 });
 
 const buildSendMessageParams = (

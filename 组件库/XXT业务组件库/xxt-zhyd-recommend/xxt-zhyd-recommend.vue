@@ -2,7 +2,7 @@
   <view class="home-book-recommended">
     <!-- <view class="model-header">
       <image
-        :src="`${$cdn}/nb/m/uni-zhyd/img/class_study_title_guidance.png`"
+        :src="`https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/image/class_study_title_guidance.png`"
         mode="aspectFill"
         class="model-header-left-image"
       />

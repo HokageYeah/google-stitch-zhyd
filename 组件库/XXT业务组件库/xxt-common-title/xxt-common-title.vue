@@ -1,7 +1,7 @@
 <template>
   <view class="root">
     <view class="root-content">
-      <image v-if="isShowMark" :src="`${$cdn}${markSrc}`" class="mark" />
+      <image v-if="isShowMark" :src="`${markSrc}`" class="mark" />
       <view
         v-if="title.length > 0"
         class="title-text"
@@ -29,7 +29,7 @@ const props = withDefaults(
   }>(),
   {
     title: '',
-    markSrc: '/nb/m/uni-zhyd/img/class_study_title_guidance.png',
+    markSrc: 'https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/image/class_study_title_guidance.png',
     isShowMark: true,
     titleFontSize: 18,
     titleColor: '#222'

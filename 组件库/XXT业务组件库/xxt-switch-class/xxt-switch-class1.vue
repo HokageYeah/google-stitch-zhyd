@@ -20,7 +20,7 @@
               v-if="isTeacher"
               class="content-header-user-text-info-img"
               mode="aspectFill"
-              :src="`${$cdn}/nb/m/uni-zhyd/img/home_class_switch.png`"
+              :src="`https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/image/home_class_switch.png`"
             ></image>
             <!-- <tui-icon
               class="content-header-user-text-info-icon"
@@ -69,15 +69,9 @@ const userImageStr = computed(() => {
   let key: keyType = '0';
   // // 角色 // jxlx身份类型 -1, "网站注册账号" 0, "教师" 1, "学生" 2, "家长" 3, "管理员"  99, "访客（未登录）"
   const roleType = {
-    '0': `${
-      instance!.appContext.config.globalProperties.$cdn
-    }/nb/m/uni-zhyd/img/user_teacher_img.png`,
-    '1': `${
-      instance!.appContext.config.globalProperties.$cdn
-    }/nb/m/uni-zhyd/img/user_student_img.png`,
-    '-1': `${
-      instance!.appContext.config.globalProperties.$cdn
-    }/nb/m/uni-zhyd/img/user_student_img.png`
+    '0': `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/image/user_teacher_img.png`,
+    '1': `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/image/user_student_img.png`,
+    '-1': `https://raw.githubusercontent.com/HokageYeah/google-stitch-zhyd/master/image/user_student_img.png`
   };
   if (userInfo.value.jut) {
     key = (
